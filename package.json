@@ -1,0 +1,25 @@
+{
+  "name": "joinintern-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --write ./**/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none"
+  },
+  "dependencies": {
+    "wx-axios-promise": "^2.3.3"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
+  }
+}

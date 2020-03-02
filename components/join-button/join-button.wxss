@@ -1,0 +1,13 @@
+.rounded-btn {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30rpx;
+  background: #fff;
+  transition: 0.2s;
+  margin: 25rpx auto;
+  width: 25%;
+}
+.rounded-btn:active {
+  background: rgba(1, 1, 1, 0.2);
+}
+
+/*# sourceMappingURL=join-button.wxss.map */

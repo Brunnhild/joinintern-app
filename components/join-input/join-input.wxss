@@ -1,0 +1,23 @@
+.rounded-input {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30rpx;
+  font-size: 35rpx;
+  height: 70rpx;
+  padding-left: 5%;
+  width: 95%;
+  margin: 0 0 35rpx 0;
+}
+
+.input-title {
+  font-size: 29.1666666667rpx;
+  margin-left: 1em;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.prepend-bullet {
+  border-left: solid grey 10rpx;
+  padding-left: 10rpx;
+}
+
+/*# sourceMappingURL=join-input.wxss.map */

@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "join-input": "../../components/join-input/join-input",
+    "join-textarea": "../../components/join-textarea/join-textarea",
+    "join-button": "../../components/join-button/join-button",
+    "join-checkbox": "../../components/join-checkbox/join-checkbox",
+    "join-divider": "../../components/join-divider/join-divider",
+    "join-icon-button": "../../components/join-icon-button/join-icon-button",
+    "join-page-title": "../../components/join-page-title/join-page-title",
+    "join-card": "../../components/join-card/join-card",
+    "join-inline-card": "../../components/join-inline-card/join-inline-card",
+    "join-picker": "../../components/join-picker/join-picker",
+    "join-tab-view": "../../components/join-tab-view/join-tab-view",
+    "join-chip": "../../components/join-chip/join-chip"
+  }
+}

@@ -1,0 +1,5 @@
+<!--components/join-page-title/join-page-title.wxml-->
+<view class="page-head">
+  <view class="page-title"><slot name="title"></slot></view>
+  <view class="extra-page-title"><slot name="extra"></slot></view>
+</view>

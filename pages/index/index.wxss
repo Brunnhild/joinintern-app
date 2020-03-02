@@ -1,0 +1,8 @@
+.test {
+  background: red;
+  text-align: center;
+  color: black;
+  margin: 30rpx;
+}
+
+/*# sourceMappingURL=index.wxss.map */

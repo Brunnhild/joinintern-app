@@ -1,0 +1,16 @@
+.page-head {
+  margin: 20rpx 0 35rpx 35rpx;
+}
+
+.page-title {
+  font-size: 52.5rpx;
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.extra-page-title {
+  font-size: 26.9230769231rpx;
+  margin-left: 0.5em;
+}
+
+/*# sourceMappingURL=join-page-title.wxss.map */

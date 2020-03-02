@@ -1,0 +1,7 @@
+.btn {
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+}
+
+/*# sourceMappingURL=home.wxss.map */

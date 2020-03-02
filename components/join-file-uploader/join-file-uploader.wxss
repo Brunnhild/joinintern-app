@@ -1,0 +1,14 @@
+.file {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30rpx;
+  font-size: 35rpx;
+  height: 70rpx;
+  padding-left: 5%;
+  width: 95%;
+  margin: 0 0 35rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=join-file-uploader.wxss.map */

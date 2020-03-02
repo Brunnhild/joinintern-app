@@ -1,0 +1,2 @@
+<!--components/join-chip/join-chip.wxml-->
+<view class="chip"><slot></slot></view>

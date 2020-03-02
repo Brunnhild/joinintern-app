@@ -1,0 +1,14 @@
+.chip {
+  font-size: 35rpx;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  padding: 0.2em 0.6em;
+  border-radius: 0.8em;
+  transition: 0.2s;
+  margin: 0.5em;
+}
+.chip:active {
+  background: rgba(1, 1, 1, 0.2);
+}
+
+/*# sourceMappingURL=join-chip.wxss.map */

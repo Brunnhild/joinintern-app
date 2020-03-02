@@ -1,0 +1,35 @@
+.userinfo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+j-inline-card view:last-child {
+  text-align: center;
+}
+
+.image {
+  height: 128rpx;
+  width: 128rpx;
+}
+
+.big {
+  width: 40%;
+}
+
+/*# sourceMappingURL=mine.wxss.map */

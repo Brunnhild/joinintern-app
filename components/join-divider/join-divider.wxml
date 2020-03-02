@@ -1,0 +1,2 @@
+<!--components/join-divider/join-divider.wxml-->
+<view class="divider"></view>

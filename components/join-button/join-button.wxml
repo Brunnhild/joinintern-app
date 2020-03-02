@@ -1,0 +1,6 @@
+<!--components/join-button/join-button.wxml-->
+<view>
+  <button class="rounded-btn">
+    <slot></slot>
+  </button>
+</view>

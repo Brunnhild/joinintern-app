@@ -1,0 +1,8 @@
+.divider {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  height: 4rpx;
+  margin: 10rpx 0;
+}
+
+/*# sourceMappingURL=join-divider.wxss.map */

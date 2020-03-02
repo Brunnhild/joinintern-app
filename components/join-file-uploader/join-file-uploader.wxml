@@ -1,0 +1,4 @@
+<!--components/join-file-uploader/join-file-uploader.wxml-->
+<view bindtap="select" class="file">
+  <slot></slot>：{{status}}
+</view>

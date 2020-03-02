@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/search/search",
+    "pages/mine/mine",
+    "pages/message/message",
+    "pages/index/index",
+    "pages/post/post",
+    "pages/signup/signup"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/home.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "assets/search.png",
+        "selectedIconPath": "assets/search.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "assets/email.png",
+        "selectedIconPath": "assets/email.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我",
+        "iconPath": "assets/user.png",
+        "selectedIconPath": "assets/user.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "j-input": "../../components/join-input/join-input",
+    "j-textarea": "../../components/join-textarea/join-textarea",
+    "j-button": "../../components/join-button/join-button",
+    "j-checkbox": "../../components/join-checkbox/join-checkbox",
+    "j-divider": "../../components/join-divider/join-divider",
+    "j-icon-button": "../../components/join-icon-button/join-icon-button",
+    "j-page-title": "../../components/join-page-title/join-page-title",
+    "j-card": "../../components/join-card/join-card",
+    "j-inline-card": "../../components/join-inline-card/join-inline-card",
+    "j-picker": "../../components/join-picker/join-picker",
+    "j-tab-view": "../../components/join-tab-view/join-tab-view",
+    "j-chip": "../../components/join-chip/join-chip",
+    "j-background": "../../components/join-background/join-background",
+    "j-page": "../../components/join-page/join-page",
+    "j-file-uploader": "../../components/join-file-uploader/join-file-uploader"
+  }
+}

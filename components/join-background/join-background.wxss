@@ -1,0 +1,6 @@
+.background {
+  background-size: cover;
+  background: url("http://www.joinintern.cn:8090/media/background.png");
+}
+
+/*# sourceMappingURL=join-background.wxss.map */

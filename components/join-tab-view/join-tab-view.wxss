@@ -1,0 +1,23 @@
+.header {
+  background: #fefefe;
+}
+
+.tabs {
+  height: 2em;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.tabs .tab-item {
+  text-align: center;
+}
+
+.slider {
+  background: rgba(1, 1, 1, 0.2);
+  height: 7rpx;
+  position: relative;
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=join-tab-view.wxss.map */

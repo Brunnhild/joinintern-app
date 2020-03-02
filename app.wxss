@@ -1,0 +1,12 @@
+.page-container {
+  width: 90%;
+  padding: 5%;
+  background: #fefefe;
+}
+
+.background {
+  background-size: cover;
+  background: url("http://www.joinintern.cn:8090/media/background.png");
+}
+
+/*# sourceMappingURL=app.wxss.map */

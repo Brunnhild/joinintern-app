@@ -1,0 +1,11 @@
+.checkbox-view {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  margin: 10rpx;
+}
+.checkbox-view .text {
+  font-size: 35rpx;
+}
+
+/*# sourceMappingURL=join-checkbox.wxss.map */

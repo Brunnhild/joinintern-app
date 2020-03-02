@@ -1,0 +1,5 @@
+<!--components/join-checkbox/join-checkbox.wxml-->
+<view class="checkbox-view">
+  <checkbox/>
+  <text class="text"><slot></slot></text>
+</view>

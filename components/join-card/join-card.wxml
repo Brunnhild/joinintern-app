@@ -1,0 +1,20 @@
+<!--components/join-card/join-card.wxml-->
+<view class="card {{row ? 'column' : ''}}">
+  <image
+          wx:if="{{avatar}}"
+          src="{{avatar}}"
+          class="avatar {{row ? 'column-img' : ''}}"
+          mode="widthFix"
+  />
+  <view class="body">
+    <view class="title">
+      <slot name="title"></slot>
+    </view>
+    <view class="middle">
+      <slot name="body"></slot>
+    </view>
+    <view class="extra">
+      <slot name="extra"></slot>
+    </view>
+  </view>
+</view>

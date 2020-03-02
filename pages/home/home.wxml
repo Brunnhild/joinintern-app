@@ -1,0 +1,5 @@
+<!--pages/home/home.wxml-->
+<view class="page-container">
+  <j-icon-button icon="/assets/plus.png" class="btn" bindtap="goPost"></j-icon-button>
+  <j-file-uploader>请选择照片</j-file-uploader>
+</view>

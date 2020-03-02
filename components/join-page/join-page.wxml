@@ -1,0 +1,5 @@
+<!--components/join-page/join-page.wxml-->
+<view class="root">
+  <image class="icon" src="{{icon}}"/>
+  <view class="text"><slot></slot></view>
+</view>

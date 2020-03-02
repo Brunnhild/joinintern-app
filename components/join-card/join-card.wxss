@@ -1,0 +1,40 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10rpx;
+  margin: 30rpx auto;
+  font-size: 35rpx;
+  padding: 0.7em;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 42rpx;
+  font-weight: bold;
+  margin: 0.3em 0 0.5em 0.5em;
+}
+
+.middle {
+  font-size: 35rpx;
+  margin-bottom: 1em;
+}
+
+.extra {
+  font-size: 23.3333333333rpx;
+  text-align: right;
+}
+
+.avatar {
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.column-img {
+  margin-right: 30rpx;
+}
+
+/*# sourceMappingURL=join-card.wxss.map */

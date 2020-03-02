@@ -1,0 +1,5 @@
+<!--components/join-inline-card/join-inline-card.wxml-->
+<view class="card-two-row {{border ? 'bordered' : ''}}">
+  <view class="first"><slot name="upper"></slot></view>
+  <view><slot name="lower"></slot></view>
+</view>

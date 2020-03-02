@@ -1,0 +1,104 @@
+<!--index.wxml-->
+<view class="page-container">
+  <j-page-title>
+    <view slot="title">标题</view>
+    <view slot="extra">副标题</view>
+  </j-page-title>
+
+  <j-input placeholder="输入信息" title="标题" show-bullet></j-input>
+  <j-input placeholder="输入信息" title="标题"></j-input>
+  <j-input placeholder="输入信息"></j-input>
+  <j-picker index="{{0}}" range="{{['第一个选项', '第二个选项']}}" label="请选择"></j-picker>
+
+  <j-textarea placeholder="输入信息" title="标题"></j-textarea>
+  <view>
+    <j-chip>文字</j-chip>
+    <j-chip>文字</j-chip>
+    <j-chip>文字</j-chip>
+    <j-chip>文字</j-chip>
+  </view>
+
+  <j-checkbox>单选</j-checkbox>
+  <j-checkbox>单选</j-checkbox>
+
+  <j-button>点击确认</j-button>
+  <j-button>点击确认</j-button>
+
+  <view style="width: 100%;">
+    <j-tab-view tabs="{{['first', 'second']}}">
+      <view slot="0">
+        <j-card row avatar="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582781566180&di=a0ba0382a508be8c01687691369693ef&imgtype=0&src=http%3A%2F%2Fimg3.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp90995552.jpg">
+          <view slot="title">标题</view>
+          <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
+          <view slot="extra">脚注</view>
+        </j-card>
+      </view>
+      <view slot="1">
+        <j-card row avatar="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582782771093&di=5f364b4719c34b28c924075451a5d724&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201903%2F10%2F20190310092843_clusj.thumb.700_0.jpg">
+          <view slot="title">标题</view>
+          <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
+          <view slot="extra">脚注</view>
+        </j-card>
+      </view>
+    </j-tab-view>
+  </view>
+
+  <j-divider></j-divider>
+
+  <view style="display: flex; justify-content: space-around;">
+    <j-inline-card border>
+      <view slot="upper">
+        <j-icon-button icon="/assets/code.png"></j-icon-button>
+      </view>
+      <view slot="lower">第二行</view>
+    </j-inline-card>
+    <j-inline-card>
+      <view slot="upper">
+        <image src="/assets/human.png" style="width: 128rpx; height: 128rpx;"/>
+      </view>
+      <view slot="lower">第二行</view>
+    </j-inline-card>
+    <j-inline-card>
+      <view slot="upper">
+        <j-icon-button icon="/assets/code.png"></j-icon-button>
+      </view>
+      <view slot="lower">第二行</view>
+    </j-inline-card>
+    <j-inline-card>
+      <view slot="upper">
+        <j-icon-button icon="/assets/code.png"></j-icon-button>
+      </view>
+      <view slot="lower">第二行</view>
+    </j-inline-card>
+  </view>
+  <j-card>
+    <view slot="title">标题</view>
+    <view slot="body">这世上树叶有千万片,这世上人有千万种, 寒暄握手或者擦肩而过，不一定都要相爱, 不一定都要相守,只要学会欣赏。 拥有一个好朋友，比拥有一段要平实得多， 在人的一生中，每一次用心的投</view>
+    <view slot="extra">脚注</view>
+  </j-card>
+  <j-card avatar="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582781566180&di=a0ba0382a508be8c01687691369693ef&imgtype=0&src=http%3A%2F%2Fimg3.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp90995552.jpg">
+    <view slot="title">标题</view>
+    <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
+    <view slot="extra">脚注</view>
+  </j-card>
+  <j-card row avatar="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582781566180&di=a0ba0382a508be8c01687691369693ef&imgtype=0&src=http%3A%2F%2Fimg3.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp90995552.jpg">
+    <view slot="title">标题</view>
+    <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
+    <view slot="extra">脚注</view>
+  </j-card>
+  <j-card row avatar="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582782722376&di=e1636e3066655a6751a3568997f2bcef&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn20190821ac%2F344%2Fw750h394%2F20190821%2Fe530-icmpfxc0754495.jpg">
+    <view slot="title">标题</view>
+    <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
+    <view slot="extra">脚注</view>
+  </j-card>
+  <j-card row avatar="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582782771093&di=5f364b4719c34b28c924075451a5d724&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201903%2F10%2F20190310092843_clusj.thumb.700_0.jpg">
+    <view slot="title">标题</view>
+    <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
+    <view slot="extra">脚注</view>
+  </j-card>
+  <j-card avatar="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582782860190&di=4e3936aaa3f474e4c915e49ab60847f4&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201804%2F11%2F20180411110044_vTZQY.thumb.400_0.jpeg">
+    <view slot="title">标题</view>
+    <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
+    <view slot="extra">脚注</view>
+  </j-card>
+</view>

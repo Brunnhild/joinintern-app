@@ -1,0 +1,4 @@
+<!--pages/message/message.wxml-->
+<view>
+  <j-page icon="/assets/sad.png">您没有消息哦</j-page>
+</view>

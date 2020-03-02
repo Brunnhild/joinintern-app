@@ -1,0 +1,11 @@
+<!--pages/signup/signup.wxml-->
+<view class="page-container">
+  <j-input placeholder="输入您的姓名" title="姓名" show-bullet bindinput="inputName"></j-input>
+  <j-input placeholder="输入您的学号" mode="number" title="学号" show-bullet bindinput="inputId"></j-input>
+  <j-input placeholder="输入您的学校" title="学校" show-bullet bindinput="inputSchool"></j-input>
+  <j-picker range="{{genders}}" label="性别" bindselect="selectGender"></j-picker>
+  <j-input placeholder="输入您的年级" mode="number" title="年级" show-bullet bindinput="inputLevel"></j-input>
+  <j-picker range="{{majors}}" label="专业" bindselect="selectMajor"></j-picker>
+  <j-file-uploader bindselect="selectPhoto">请选择校园卡照片</j-file-uploader>
+  <j-button bindtap="signup">注册</j-button>
+</view>

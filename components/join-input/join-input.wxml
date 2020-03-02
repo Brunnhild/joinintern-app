@@ -1,0 +1,5 @@
+<!--components/input-view/input-view.wxml-->
+<view>
+  <text class="{{showBullet ? 'prepend-bullet' : ''}} input-title">{{title}}</text>
+  <input class="rounded-input" placeholder="{{placeholder}}" bindinput="bindKeyInput"/>
+</view>

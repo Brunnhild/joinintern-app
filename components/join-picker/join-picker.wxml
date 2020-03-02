@@ -1,0 +1,8 @@
+<!--components/join-picker/join-picker.wxml-->
+<view>
+  <picker index="{{index}}" range="{{range}}" class="rounded-picker" bindchange="change">
+    <view class="picker">
+      {{label ? label + ': ' : ''}}{{range[index]}}
+    </view>
+  </picker>
+</view>
