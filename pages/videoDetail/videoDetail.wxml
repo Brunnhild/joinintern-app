@@ -1,0 +1,24 @@
+<!--pages/videoDetail/videoDetail.wxml-->
+<view class="page-container">
+  <view class="form form-bordered">
+    <view class="form-title">查看视频</view>
+    <view class="form-item">
+      <view class="form-item-title">标题：</view>
+      <view class="form-item-detail">{{video.videoTitle}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">发布时间：</view>
+      <view class="form-item-detail">{{video.postDate}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">视频简介：</view>
+      <view class="form-item-detail-block">{{video.videoDescription}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">观看视频：</view>
+      <view class="form-item-detail-block">
+        <video src="{{video.videoPath}}" />
+      </view>
+    </view>
+  </view>
+</view>

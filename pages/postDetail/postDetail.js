@@ -1,7 +1,5 @@
-// pages/videos/videos.js
-import util from '../../utils/util'
-import { VideoController } from '../../service/VideoController'
-const app = getApp()
+// pages/postDetail/postDetail.js
+import { PostController } from '../../service/PostController'
 
 Page({
 
@@ -9,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    videos: []
+    post: null
   },
 
   /**
@@ -17,14 +15,14 @@ Page({
    */
   onLoad: async function (options) {
     try {
-      let res = await VideoController.getAllVideos()
+      let res = await PostController.query(options.postId)
       console.log(res)
       this.setData({
-        videos: res
+        post: res
       })
     } catch (e) {
       wx.showModal({
-        title: '视频获取失败',
+        title: '获取详细信息失败',
         showCancel: false
       })
       console.log(e)
@@ -78,25 +76,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  toCreate() {
-    if (app.globalData.user) {
-      wx.navigateTo({
-        url: '/pages/upload/upload'
-      })
-    } else {
-      wx.navigateTo({
-        url: '/pages/signup/signup'
-      })
-    }
-  },
-
-  async toDetail(e) {
-    if (app.globalData.user.userId)
-      await VideoController.hitVideo(app.globalData.user.userId, e.currentTarget.dataset.videoId)
-    wx.navigateTo({
-      url: `/pages/videoDetail/videoDetail?videoId=${e.currentTarget.dataset.videoId}`
-    })
   }
 })

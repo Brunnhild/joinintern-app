@@ -74,5 +74,13 @@ Page({
         url: '/pages/signup/signup'
       })
     }
+  },
+
+  async toDetail(e) {
+    if (app.globalData.user.userId)
+      await PostController.hitPost(app.globalData.user.userId, e.currentTarget.dataset.postId)
+    wx.navigateTo({
+      url: `/pages/postDetail/postDetail?postId=${e.currentTarget.dataset.postId}`
+    })
   }
 })

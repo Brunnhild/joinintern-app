@@ -16,6 +16,7 @@ page {
 
 .form {
   padding: 5%;
+  background: white;
 }
 
 .form-title {

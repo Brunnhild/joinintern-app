@@ -2,7 +2,7 @@
 <view class="page-container">
   <j-icon-button icon="/assets/plus.png" class="btn" bindtap="toCreate"></j-icon-button>
   <block wx:for="{{videos}}" wx:key="index">
-    <j-card>
+    <j-card data-video-id="{{item.videoId}}" bindtap="toDetail">
       <view slot="title">{{item.videoTitle}}</view>
       <view slot="body">{{item.videoDescription}}</view>
       <view slot="extra">发布时间：{{item.postDate}}</view>

@@ -87,5 +87,11 @@ Page({
     wx.navigateTo({
       url: '/pages/videos/videos'
     })
+  },
+
+  toHome() {
+    wx.switchTab({
+      url: '/pages/home/home'
+    })
   }
 })

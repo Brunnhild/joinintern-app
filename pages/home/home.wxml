@@ -2,7 +2,7 @@
 <view class="page-container">
   <j-icon-button icon="/assets/plus.png" class="btn" bindtap="goPost"></j-icon-button>
   <block wx:for="{{posts}}" wx:key="index">
-    <j-card>
+    <j-card data-post-id="{{item.postId}}" bindtap="toDetail">
       <view slot="title">{{item.postTitle}}</view>
       <view slot="body">{{item.postContent}}</view>
       <view slot="extra">过期时间：{{item.expiration}}</view>

@@ -40,7 +40,7 @@
       </view>
       <view slot="lower">个人画像智能推荐</view>
     </j-inline-card>
-    <j-inline-card border class="big">
+    <j-inline-card border class="big" bindtap="toHome">
       <view slot="upper">
         <image src="/assets/note.png" class="image"/>
       </view>

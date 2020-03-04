@@ -1,0 +1,46 @@
+<!--pages/postDetail/postDetail.wxml-->
+<view class="page-container">
+  <view class="form form-bordered">
+    <view class="form-title">实习信息</view>
+    <view class="form-item">
+      <view class="form-item-title">标题：</view>
+      <view class="form-item-detail">{{post.postTitle}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">时长：</view>
+      <view class="form-item-detail">{{post.duration}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">实习地点：</view>
+      <view class="form-item-detail">{{post.location}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">闵行距离：</view>
+      <view class="form-item-detail">{{post.distancemh}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">中北距离：</view>
+      <view class="form-item-detail">{{post.distancezb}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">过期时间：</view>
+      <view class="form-item-detail">{{post.expiration}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">开始时间：</view>
+      <view class="form-item-detail">{{post.startTime}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">结束时间：</view>
+      <view class="form-item-detail">{{post.endTime}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">发布时间：</view>
+      <view class="form-item-detail">{{post.postDate}}</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">实习简介：</view>
+      <view class="form-item-detail-block">{{post.postContent}}</view>
+    </view>
+  </view>
+</view>
