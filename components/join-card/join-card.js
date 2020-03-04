@@ -8,7 +8,11 @@ Component({
    */
   properties: {
     avatar: String,
-    row: Boolean
+    row: Boolean,
+    background: {
+      type: String,
+      value: 'rgb(255,255,255)'
+    }
   },
 
   /**

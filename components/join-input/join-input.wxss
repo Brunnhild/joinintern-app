@@ -6,6 +6,7 @@
   padding-left: 5%;
   width: 95%;
   margin: 0 0 35rpx 0;
+  background: white;
 }
 
 .input-title {

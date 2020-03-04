@@ -1,0 +1,8 @@
+.btn {
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+  z-index: 10;
+}
+
+/*# sourceMappingURL=videos.wxss.map */

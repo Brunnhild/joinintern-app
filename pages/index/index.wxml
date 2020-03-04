@@ -101,4 +101,23 @@
     <view slot="body">做人别太装，分清铁和钢。时代变迁快，早晚要受伤。</view>
     <view slot="extra">脚注</view>
   </j-card>
+  <view class="form form-bordered">
+    <view class="form-title">表格</view>
+    <view class="form-item">
+      <view class="form-item-title">标题：</view>
+      <view class="form-item-detail">内容</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">标题：</view>
+      <view class="form-item-detail">内容</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">标题：</view>
+      <view class="form-item-detail-block">内容</view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">标题：</view>
+      <view class="form-item-detail">内容</view>
+    </view>
+  </view>
 </view>

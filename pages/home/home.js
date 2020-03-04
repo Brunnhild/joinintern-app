@@ -1,17 +1,33 @@
 // pages/home/home.js
 import { UserController } from '../../service/UserController'
+import { PostController } from '../../service/PostController'
 const app = getApp()
 
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    posts: []
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: async function(options) {
+    try {
+      let res = await PostController.getAllPost()
+      this.setData({
+        posts: res
+      })
+    } catch (e) {
+      wx.showModal({
+        title: '实习获取失败',
+        showCancel: false
+      })
+      console.log(e)
+    }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

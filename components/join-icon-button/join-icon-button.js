@@ -4,7 +4,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    icon: String
+    icon: String,
+    background: {
+      type: String,
+      value: 'rgb(255,255,255)'
+    }
   },
 
   /**

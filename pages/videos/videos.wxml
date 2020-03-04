@@ -1,0 +1,11 @@
+<!--pages/videos/videos.wxml-->
+<view class="page-container">
+  <j-icon-button icon="/assets/plus.png" class="btn" bindtap="toCreate"></j-icon-button>
+  <block wx:for="{{videos}}" wx:key="index">
+    <j-card>
+      <view slot="title">{{item.videoTitle}}</view>
+      <view slot="body">{{item.videoDescription}}</view>
+      <view slot="extra">发布时间：{{item.postDate}}</view>
+    </j-card>
+  </block>
+</view>

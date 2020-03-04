@@ -1,0 +1,7 @@
+<!--pages/upload/upload.wxml-->
+<view class="page-container">
+  <j-input placeholder="请输入视频标题" title="视频标题" show-bullet bindinput="inputTitle"></j-input>
+  <j-file-uploader type="video" bindselect="selectVideo">请选择视频</j-file-uploader>
+  <j-textarea placeholder="输入简介" title="视频简介" show-bullet bindinput="inputDescription"></j-textarea>
+  <j-button bindtap="upload">上传</j-button>
+</view>

@@ -12,10 +12,10 @@
       </block>
     </view>
     <view class="slider" style="width: {{width}}px; left: {{left}}px;"></view>
-    <slot name="0" wx:if="{{active == 0}}"></slot>
-    <slot name="1" wx:if="{{active == 1}}"></slot>
-    <slot name="2" wx:if="{{active == 2}}"></slot>
-    <slot name="3" wx:if="{{active == 3}}"></slot>
-    <slot name="4" wx:if="{{active == 4}}"></slot>
   </view>
+  <slot name="0" wx:if="{{active == 0}}"></slot>
+  <slot name="1" wx:if="{{active == 1}}"></slot>
+  <slot name="2" wx:if="{{active == 2}}"></slot>
+  <slot name="3" wx:if="{{active == 3}}"></slot>
+  <slot name="4" wx:if="{{active == 4}}"></slot>
 </view>

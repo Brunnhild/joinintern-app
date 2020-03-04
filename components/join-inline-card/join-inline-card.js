@@ -7,7 +7,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    border: Boolean
+    border: Boolean,
+    background: {
+      type: String,
+      value: 'rgb(255,255,255)'
+    }
   },
 
   /**

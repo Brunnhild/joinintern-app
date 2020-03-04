@@ -1,9 +1,22 @@
 // pages/post/post.js
+import { PostController } from '../../service/PostController'
+const app = getApp()
+
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    title: '',
+    duration: '',
+    location: '',
+    distanceMH: '',
+    distanceZB: '',
+    startTime: '',
+    endTime: '',
+    description: '',
+    expiration: ''
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -43,5 +56,89 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {}
+  onShareAppMessage: function() {},
+
+  async create() {
+    try {
+      let res = await PostController.createPost(
+        this.data.title,
+        this.data.duration,
+        this.data.location,
+        this.data.distanceZB,
+        this.data.distanceMH,
+        this.data.description,
+        this.data.expiration,
+        app.globalData.user.userId,
+        this.data.startTime,
+        this.data.endTime
+      )
+      console.log(res)
+      wx.showToast({
+        title: '创建成功',
+        icon: 'success'
+      })
+      wx.switchTab({
+        url: '/pages/home/home'
+      })
+    } catch (e) {
+      wx.showModal({
+        title: '创建失败',
+        showCancel: false
+      })
+    }
+  },
+
+  inputTitle(e) {
+    this.setData({
+      title: e.detail
+    })
+  },
+
+  inputDuration(e) {
+    this.setDate({
+      duration: e.detail
+    })
+  },
+
+  inputLocation(e) {
+    this.setData({
+      location: e.detail
+    })
+  },
+
+  inputDistanceMH(e) {
+    this.setData({
+      distanceMH: e.detail
+    })
+  },
+
+  inputDistanceZB(e) {
+    this.setData({
+      distanceZB: e.detail
+    })
+  },
+
+  selectStartTime(e) {
+    this.setData({
+      startTime: e.detail
+    })
+  },
+
+  selectEndTime(e) {
+    this.setData({
+      endTime: e.detail
+    })
+  },
+
+  inputDescription(e) {
+    this.setData({
+      description: e.detail
+    })
+  },
+
+  selectExpiration(e) {
+    this.setData({
+      expiration: e.detail
+    })
+  }
 })

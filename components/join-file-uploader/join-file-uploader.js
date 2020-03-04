@@ -3,7 +3,12 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {},
+  properties: {
+    type: {
+      type: String,
+      value: 'image'
+    }
+  },
 
   /**
    * 组件的初始数据
@@ -17,14 +22,26 @@ Component({
    */
   methods: {
     select(e) {
-      wx.chooseImage({
-        success: res => {
-          this.triggerEvent('select', res)
-          this.setData({
-            status: '已选择'
-          })
-        }
-      })
+      if (this.data.type === 'image') {
+        wx.chooseImage({
+          success: res => {
+            this.triggerEvent('select', res)
+            this.setData({
+              status: '已选择'
+            })
+          }
+        })
+      }
+      else if (this.data.type === 'video') {
+        wx.chooseVideo({
+          success: res => {
+            this.triggerEvent('select', res)
+            this.setData({
+              status: '已选择'
+            })
+          }
+        })
+      }
     }
   }
 })

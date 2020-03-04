@@ -1,4 +1,4 @@
 <!--components/join-icon-button/join-icon-button.wxml-->
-<view class="icon-btn">
+<view class="icon-btn" style="background: {{background}};">
   <image class="image" src="{{icon}}" />
 </view>

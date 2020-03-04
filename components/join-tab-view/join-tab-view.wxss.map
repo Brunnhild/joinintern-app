@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["join-tab-view.sass","../../common.sass"],"names":[],"mappings":"AAEA;EACE,YCHiB;;;ADKnB;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;;;AAEJ;EACE,YCZY;EDaZ;EACA;EACA","file":"join-tab-view.wxss"}
+{"version":3,"sourceRoot":"","sources":["join-tab-view.sass","../../common.sass"],"names":[],"mappings":"AAEA;EACE,YCHiB;EDIjB;;;AAEF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;;;AAEJ;EACE,YCbY;EDcZ;EACA;EACA;;;AAEF;EACE,OCnBY","file":"join-tab-view.wxss"}

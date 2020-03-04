@@ -8,25 +8,25 @@
     </block>
   </view>
   <view class="container">
-    <j-inline-card>
+    <j-inline-card background="rgba(0, 0, 0, 0)">
       <view slot="upper">
         <j-icon-button icon="/assets/favorites.png"></j-icon-button>
       </view>
       <view slot="lower">我的收藏</view>
     </j-inline-card>
-    <j-inline-card>
+    <j-inline-card background="rgba(0, 0, 0, 0)">
       <view slot="upper">
         <j-icon-button icon="/assets/download.png"></j-icon-button>
       </view>
       <view slot="lower">视频下载</view>
     </j-inline-card>
-    <j-inline-card>
+    <j-inline-card background="rgba(0, 0, 0, 0)">
       <view slot="upper">
         <j-icon-button icon="/assets/history.png"></j-icon-button>
       </view>
       <view slot="lower">浏览记录</view>
     </j-inline-card>
-    <j-inline-card>
+    <j-inline-card background="rgba(0, 0, 0, 0)">
       <view slot="upper">
         <j-icon-button icon="/assets/set.png"></j-icon-button>
       </view>
@@ -47,7 +47,7 @@
       <view slot="lower">校内实习信息平台</view>
     </j-inline-card>
   </view>
-  <view class="container">
+  <view class="container" bindtap="toVideo">
     <j-inline-card border class="big">
       <view slot="upper">
         <image src="/assets/video.png" class="image"/>

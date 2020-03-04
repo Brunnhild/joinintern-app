@@ -6,7 +6,9 @@
     "pages/message/message",
     "pages/index/index",
     "pages/post/post",
-    "pages/signup/signup"
+    "pages/signup/signup",
+    "pages/videos/videos",
+    "pages/upload/upload"
   ],
   "tabBar": {
     "list": [
@@ -59,6 +61,7 @@
     "j-chip": "../../components/join-chip/join-chip",
     "j-background": "../../components/join-background/join-background",
     "j-page": "../../components/join-page/join-page",
-    "j-file-uploader": "../../components/join-file-uploader/join-file-uploader"
+    "j-file-uploader": "../../components/join-file-uploader/join-file-uploader",
+    "j-date-picker": "../../components/join-date-picker/join-date-picker"
   }
 }

@@ -1,0 +1,8 @@
+<!--components/join-date-picker/join-date-picker.wxml-->
+<view>
+  <picker class="rounded-picker" mode="date" value="{{date}}" start="2019-12-32" end="2030-12-31" bindchange="change">
+    <view class="picker">
+      {{label ? label + ': ' : ''}}{{date}}
+    </view>
+  </picker>
+</view>

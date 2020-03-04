@@ -81,5 +81,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  toVideo() {
+    wx.navigateTo({
+      url: '/pages/videos/videos'
+    })
   }
 })

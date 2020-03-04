@@ -1,5 +1,6 @@
 <!--components/join-card/join-card.wxml-->
-<view class="card {{row ? 'column' : ''}}">
+<view class="card {{row ? 'column' : ''}}" style="background: {{background}}">
+  <view class="mask"></view>
   <image
           wx:if="{{avatar}}"
           src="{{avatar}}"

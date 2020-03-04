@@ -75,12 +75,13 @@ Page({
             stuId: this.data.id,
             gender: this.data.gender === 0 ? 'male' : 'female',
             level: this.data.level,
-            major: this.data.major + 1,
+            major: parseInt(this.data.major) + 1,
             nickname: app.globalData.userInfo.nickName,
             avatar: app.globalData.userInfo.avatarUrl
           },
           success: res => {
-            console.log(res)
+            console.log(JSON.parse(res.data))
+            app.globalData.user = JSON.parse(res.data)
             wx.showToast({
               title: '注册成功',
               icon: 'success'
