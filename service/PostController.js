@@ -1,114 +1,135 @@
 import { service } from './request'
-
 export class PostController {
   static getAllPost() {
     let data = {}
     return service.post('/post/get', { params: data })
   }
-
   static query(id) {
     let data = { id: id }
     return service.post('/post/query', { params: data })
   }
-
-  static delete(uid, id) {
-    let data = { uid: uid, id: id }
+  static delete(id, uid) {
+    let data = { id: id, uid: uid }
     return service.post('/post/delete', { params: data })
   }
-
   static createPost(
-    postTitle,
-    duration,
-    location,
-    distancezb,
-    distancemh,
-    postContent,
-    expiration,
     authorId,
-    startTime,
-    endTime
+    distancemh,
+    distancezb,
+    duration,
+    endTime,
+    expiration,
+    location,
+    postContent,
+    postTitle,
+    startTime
   ) {
     let data = {
-      postTitle: postTitle,
-      duration: duration,
-      location: location,
-      distancezb: distancezb,
-      distancemh: distancemh,
-      postContent: postContent,
-      expiration: expiration,
       authorId: authorId,
-      startTime: startTime,
-      endTime: endTime
+      distancemh: distancemh,
+      distancezb: distancezb,
+      duration: duration,
+      endTime: endTime,
+      expiration: expiration,
+      location: location,
+      postContent: postContent,
+      postTitle: postTitle,
+      startTime: startTime
     }
     return service.post('/post/create', { params: data })
   }
-
-  static filter(postFilterObject) {
-    let data = {}
-    return service.post('/post/filter', postFilterObject, { params: data })
+  static filter(
+    distanceMH,
+    distanceZB,
+    majors,
+    maxDuration,
+    minDuration,
+    title
+  ) {
+    let data = {
+      distanceMH: distanceMH,
+      distanceZB: distanceZB,
+      majors: majors,
+      maxDuration: maxDuration,
+      minDuration: minDuration,
+      title: title
+    }
+    return service.post('/post/filter', { params: data })
   }
-
   static getMajors(id) {
     let data = { id: id }
     return service.post('/post/majors', { params: data })
   }
-
   static getLabels(id) {
     let data = { id: id }
     return service.post('/post/labels', { params: data })
   }
-
   static addLabel(labelId, postId) {
     let data = { labelId: labelId, postId: postId }
     return service.post('/post/label/add', { params: data })
   }
-
-  static addMajor(postId, majorId) {
-    let data = { postId: postId, majorId: majorId }
+  static addMajor(majorId, postId) {
+    let data = { majorId: majorId, postId: postId }
     return service.post('/post/major/add', { params: data })
   }
-
   static updatePost(
-    postId,
     openId,
-    postTitle,
-    duration,
-    location,
-    distancezb,
+    postId,
     distancemh,
-    postContent,
+    distancezb,
+    duration,
+    endTime,
     expiration,
-    startTime,
-    endTime
+    location,
+    postContent,
+    postTitle,
+    startTime
   ) {
     let data = {
-      postId: postId,
       openId: openId,
-      postTitle: postTitle,
-      duration: duration,
-      location: location,
-      distancezb: distancezb,
+      postId: postId,
       distancemh: distancemh,
-      postContent: postContent,
+      distancezb: distancezb,
+      duration: duration,
+      endTime: endTime,
       expiration: expiration,
-      startTime: startTime,
-      endTime: endTime
+      location: location,
+      postContent: postContent,
+      postTitle: postTitle,
+      startTime: startTime
     }
     return service.post('/post/update', { params: data })
   }
-
   static completePost(id) {
     let data = { id: id }
     return service.post('/post/complete', { params: data })
   }
-
-  static hitPost(user_id, postId) {
-    let data = { user_id: user_id, postId: postId }
+  static hitPost(postId, user_id) {
+    let data = { postId: postId, user_id: user_id }
     return service.post('/post/hit', { params: data })
   }
-
   static getHits(postId) {
     let data = { postId: postId }
     return service.post('/post/hits', { params: data })
+  }
+  static fav(postId, uid) {
+    let data = { postId: postId, uid: uid }
+    return service.post('/post/fav', { params: data })
+  }
+  static favoured(uid) {
+    let data = { uid: uid }
+    return service.post('/post/favoured', { params: data })
+  }
+  static cancelFav(postId, uid) {
+    let data = { postId: postId, uid: uid }
+    return service.delete('/post/cancelFav', { params: data })
+  }
+  static isFav(postId, uid) {
+    let data = { postId: postId, uid: uid }
+    return service.post('/post/isFav', { params: data })
+  }
+  static history(uid) {
+    let data = { uid: uid }
+    return service.post('/post/history', { params: data })
   }
 }

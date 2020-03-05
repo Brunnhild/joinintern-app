@@ -5,4 +5,8 @@
   z-index: 10;
 }
 
+.swiper-image {
+  width: 100%;
+}
+
 /*# sourceMappingURL=home.wxss.map */

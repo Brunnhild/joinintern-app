@@ -61,16 +61,16 @@ Page({
   async create() {
     try {
       let res = await PostController.createPost(
-        this.data.title,
-        this.data.duration,
-        this.data.location,
-        this.data.distanceZB,
-        this.data.distanceMH,
-        this.data.description,
-        this.data.expiration,
         app.globalData.user.userId,
-        this.data.startTime,
-        this.data.endTime
+        this.data.distanceMH,
+        this.data.distanceZB,
+        this.data.duration,
+        this.data.endTime,
+        this.data.expiration,
+        this.data.location,
+        this.data.description,
+        this.data.title,
+        this.data.startTime
       )
       console.log(res)
       wx.showToast({

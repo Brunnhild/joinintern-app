@@ -1,0 +1,25 @@
+<!--pages/favList/favList.wxml-->
+<view>
+  <j-tab-view tabs="{{['实习', '视频']}}">
+    <view slot="0" class="page-container">
+      <j-page icon="/assets/sad.png" wx:if="{{posts.length === 0}}">您还没有收藏实习哦</j-page>
+      <block wx:for="{{posts}}" wx:key="index">
+        <j-card data-post-id="{{item.postId}}" bindtap="toPostDetail">
+          <view slot="title">{{item.postTitle}}</view>
+          <view slot="body">{{item.postContent}}</view>
+          <view slot="extra">过期时间：{{item.expiration}}</view>
+        </j-card>
+      </block>
+    </view>
+    <view slot="1" class="page-container">
+      <j-page icon="/assets/sad.png" wx:if="{{videos.length === 0}}">您还没有收藏视频哦</j-page>
+      <block wx:for="{{videos}}" wx:key="index">
+        <j-card data-video-id="{{item.videoId}}" bindtap="toVideoDetail">
+          <view slot="title">{{item.videoTitle}}</view>
+          <view slot="body">{{item.videoDescription}}</view>
+          <view slot="extra">发布时间：{{item.postDate}}</view>
+        </j-card>
+      </block>
+    </view>
+  </j-tab-view>
+</view>

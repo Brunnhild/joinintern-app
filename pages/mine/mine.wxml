@@ -8,7 +8,7 @@
     </block>
   </view>
   <view class="container">
-    <j-inline-card background="rgba(0, 0, 0, 0)">
+    <j-inline-card background="rgba(0, 0, 0, 0)" bindtap="toFavList">
       <view slot="upper">
         <j-icon-button icon="/assets/favorites.png"></j-icon-button>
       </view>
@@ -20,7 +20,7 @@
       </view>
       <view slot="lower">视频下载</view>
     </j-inline-card>
-    <j-inline-card background="rgba(0, 0, 0, 0)">
+    <j-inline-card background="rgba(0, 0, 0, 0)" bindtap="toHistory">
       <view slot="upper">
         <j-icon-button icon="/assets/history.png"></j-icon-button>
       </view>

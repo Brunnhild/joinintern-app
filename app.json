@@ -10,7 +10,9 @@
     "pages/videos/videos",
     "pages/upload/upload",
     "pages/postDetail/postDetail",
-    "pages/videoDetail/videoDetail"
+    "pages/videoDetail/videoDetail",
+    "pages/favList/favList",
+    "pages/history/history"
   ],
   "tabBar": {
     "list": [

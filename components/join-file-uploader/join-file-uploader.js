@@ -31,8 +31,7 @@ Component({
             })
           }
         })
-      }
-      else if (this.data.type === 'video') {
+      } else if (this.data.type === 'video') {
         wx.chooseVideo({
           success: res => {
             this.triggerEvent('select', res)

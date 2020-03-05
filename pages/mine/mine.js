@@ -93,5 +93,17 @@ Page({
     wx.switchTab({
       url: '/pages/home/home'
     })
+  },
+
+  toFavList() {
+    wx.navigateTo({
+      url: '/pages/favList/favList'
+    })
+  },
+
+  toHistory() {
+    wx.navigateTo({
+      url: '/pages/history/history'
+    })
   }
 })

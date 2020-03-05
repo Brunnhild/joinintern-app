@@ -1,5 +1,7 @@
-// pages/home/home.js
+// pages/favList/favList.js
+import { VideoController } from '../../service/VideoController'
 import { PostController } from '../../service/PostController'
+
 const app = getApp()
 
 Page({
@@ -7,18 +9,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    posts: [],
-    cells: [
-      'http://www.joinintern.cn:8090/media/home-1.png',
-      'http://www.joinintern.cn:8090/media/home-2.jpg',
-      'http://www.joinintern.cn:8090/media/home-3.png'
-    ]
+    videos: [],
+    posts: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: async function(options) {
+    if (!app.globalData.user)
+      wx.navigateTo({
+        url: '/pages/signup/signup'
+      })
     this.fresh()
   },
 
@@ -60,19 +62,24 @@ Page({
    */
   onShareAppMessage: function() {},
 
-  goPost() {
-    if (app.globalData.user) {
-      wx.navigateTo({
-        url: '/pages/post/post'
+  async fresh() {
+    try {
+      let videos = await VideoController.favoured(app.globalData.user.userId)
+      let posts = await PostController.favoured(app.globalData.user.userId)
+      this.setData({
+        videos: videos,
+        posts: posts
       })
-    } else {
-      wx.navigateTo({
-        url: '/pages/signup/signup'
+    } catch (e) {
+      wx.showModal({
+        title: '获取失败',
+        showCancel: false
       })
+      console.log(e)
     }
   },
 
-  async toDetail(e) {
+  async toPostDetail(e) {
     if (app.globalData.user.userId)
       await PostController.hitPost(
         e.currentTarget.dataset.postId,
@@ -83,18 +90,14 @@ Page({
     })
   },
 
-  async fresh() {
-    try {
-      let res = await PostController.getAllPost()
-      this.setData({
-        posts: res
-      })
-    } catch (e) {
-      wx.showModal({
-        title: '实习获取失败',
-        showCancel: false
-      })
-      console.log(e)
-    }
+  async toVideoDetail(e) {
+    if (app.globalData.user.userId)
+      await VideoController.hitVideo(
+        e.currentTarget.dataset.videoId,
+        app.globalData.user.userId
+      )
+    wx.navigateTo({
+      url: `/pages/videoDetail/videoDetail?videoId=${e.currentTarget.dataset.videoId}`
+    })
   }
 })

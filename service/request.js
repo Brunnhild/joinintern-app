@@ -34,6 +34,17 @@ export const service = {
     else return base.post(url + parseQuery(config.params), body)
   },
 
+  async delete(url, body, config) {
+    if (arguments.length === 2)
+      return base.delete(url + parseQuery(body.params))
+    else return base.delete(url + parseQuery(config.params), body)
+  },
+
+  async put(url, body, config) {
+    if (arguments.length === 2) return base.put(url + parseQuery(body.params))
+    else return base.put(url + parseQuery(config.params), body)
+  },
+
   get(url, config) {
     return base.get(url + parseQuery(config.params))
   }

@@ -21,4 +21,6 @@
       </view>
     </view>
   </view>
+
+  <j-button wx:if="{{show}}" bindtap="toggle">{{followState ? '取消收藏' : '收藏'}}</j-button>
 </view>
