@@ -30,6 +30,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function(options) {
+    if (app.globalData.user.userIdentity !== 'validate') {
+      wx.showModal({
+        title: '您还没有通过认证，不能发布实习哦'
+      })
+    }
     try {
       let majors = await MajorController.getAllMajor()
       let labels = await LabelController.getLabels()

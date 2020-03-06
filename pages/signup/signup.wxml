@@ -4,8 +4,9 @@
   <j-input placeholder="输入您的学号" mode="number" title="学号" show-bullet bindinput="inputId"></j-input>
   <j-input placeholder="输入您的学校" title="学校" show-bullet bindinput="inputSchool"></j-input>
   <j-picker range="{{genders}}" label="性别" bindselect="selectGender"></j-picker>
-  <j-input placeholder="输入您的年级" mode="number" title="年级" show-bullet bindinput="inputLevel"></j-input>
+  <j-input placeholder="输入您的年级(数字年份)" mode="number" title="年级" show-bullet bindinput="inputLevel"></j-input>
   <j-picker range="{{majors}}" label="专业" bindselect="selectMajor"></j-picker>
+<!--  <j-picker range="{{types}}" label="企业类型" bindselect="selectType"></j-picker>-->
   <j-file-uploader bindselect="selectPhoto">请选择校园卡照片</j-file-uploader>
   <j-textarea placeholder="请输入您的简介" show-bullet title="简介" bindinput="inputDescription"></j-textarea>
   <j-button bindtap="signup">注册</j-button>

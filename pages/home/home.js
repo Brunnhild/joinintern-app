@@ -86,6 +86,12 @@ Page({
   async fresh() {
     try {
       let res = await PostController.getAllPost()
+      res.forEach(e => {
+        e.expiration = e.expiration.split(' ')[0]
+        e.startTime = e.startTime.split(' ')[0]
+        e.endTime = e.endTime.split(' ')[0]
+        e.postDate = e.postDate.split(' ')[0]
+      })
       this.setData({
         posts: res
       })

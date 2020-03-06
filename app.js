@@ -14,7 +14,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         let id = await UserController.getOpenId(res.code)
         let info = await UserController.find(id)
-        console.log(info)
+        if (info) console.log(info)
         getApp().globalData.user = info
       }
     })

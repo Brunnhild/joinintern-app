@@ -22,6 +22,10 @@ Page({
       let res = await PostController.query(options.postId)
       let majors = await PostController.getMajors(res.postId)
       let labels = await PostController.getLabels(res.postId)
+      res.expiration = res.expiration.split(' ')[0]
+      res.startTime = res.startTime.split(' ')[0]
+      res.endTime = res.endTime.split(' ')[0]
+      res.postDate = res.postDate.split(' ')[0]
       console.log(res)
       this.setData({
         post: res,

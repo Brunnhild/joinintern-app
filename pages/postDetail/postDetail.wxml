@@ -7,7 +7,7 @@
       <view class="form-item-detail">{{post.postTitle}}</view>
     </view>
     <view class="form-item">
-      <view class="form-item-title">时长：</view>
+      <view class="form-item-title">时长(月)：</view>
       <view class="form-item-detail">{{post.duration}}</view>
     </view>
     <view class="form-item">
@@ -15,11 +15,11 @@
       <view class="form-item-detail">{{post.location}}</view>
     </view>
     <view class="form-item">
-      <view class="form-item-title">闵行距离：</view>
+      <view class="form-item-title">闵行距离(km)：</view>
       <view class="form-item-detail">{{post.distancemh}}</view>
     </view>
     <view class="form-item">
-      <view class="form-item-title">中北距离：</view>
+      <view class="form-item-title">中北距离(km)：</view>
       <view class="form-item-detail">{{post.distancezb}}</view>
     </view>
     <view class="form-item">

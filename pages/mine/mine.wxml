@@ -14,7 +14,7 @@
       </view>
       <view slot="lower">我的收藏</view>
     </j-inline-card>
-    <j-inline-card background="rgba(0, 0, 0, 0)">
+    <j-inline-card background="rgba(0, 0, 0, 0)" bindtap="toVideo">
       <view slot="upper">
         <j-icon-button icon="/assets/download.png"></j-icon-button>
       </view>
@@ -34,7 +34,7 @@
     </j-inline-card>
   </view>
   <view class="container">
-    <j-inline-card border class="big">
+    <j-inline-card border class="big" bindtap="toHome">
       <view slot="upper">
         <image src="/assets/human.png" class="image"/>
       </view>

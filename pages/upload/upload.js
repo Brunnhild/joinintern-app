@@ -1,6 +1,7 @@
 // pages/upload/upload.js
 import { VideoController } from '../../service/VideoController'
 const app = getApp()
+import { baseURL } from '../../service/request'
 
 Page({
   /**
@@ -54,7 +55,7 @@ Page({
 
   upload() {
     wx.uploadFile({
-      url: app.globalData.baseURL + '/video/upload',
+      url: baseURL + '/video/upload',
       filePath: this.data.video,
       name: 'file',
       formData: {
@@ -95,6 +96,7 @@ Page({
   },
 
   selectVideo(e) {
+    console.log(e)
     this.setData({
       video: e.detail.tempFilePath
     })

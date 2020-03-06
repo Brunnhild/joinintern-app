@@ -81,7 +81,10 @@ Page({
 
   async fresh() {
     try {
-      let res = await VideoController.getAllVideos()
+      let res = await VideoController.getValidate()
+      res.forEach(e => {
+        e.postDate = e.postDate.split(' ')[0]
+      })
       console.log(res)
       this.setData({
         videos: res

@@ -66,6 +66,12 @@ Page({
     try {
       let videos = await VideoController.favoured(app.globalData.user.userId)
       let posts = await PostController.favoured(app.globalData.user.userId)
+      videos.forEach(e => {
+        e.postDate = e.postDate.split(' ')[0]
+      })
+      posts.forEach(e => {
+        e.expiration = e.expiration.split(' ')[0]
+      })
       this.setData({
         videos: videos,
         posts: posts

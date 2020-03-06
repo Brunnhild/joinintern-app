@@ -1,6 +1,6 @@
 import Api from 'wx-axios-promise'
 
-let baseURL = 'http://localhost:8090'
+export const baseURL = 'https://www.joinintern.cn'
 // if (process.env.NODE_ENV === 'development')
 //   baseURL = 'http://localhost:8080'
 // else baseURL = 'https://www.joinintern.cn'

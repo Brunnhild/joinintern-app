@@ -5,6 +5,7 @@
   margin: 30rpx auto;
   font-size: 35rpx;
   padding: 0.7em;
+  display: flex;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -17,6 +18,10 @@
 .middle {
   font-size: 35rpx;
   margin-bottom: 1em;
+}
+
+.body {
+  flex-grow: 2;
 }
 
 .extra {

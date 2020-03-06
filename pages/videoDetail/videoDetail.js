@@ -2,6 +2,7 @@
 import { VideoController } from '../../service/VideoController'
 import { PostController } from '../../service/PostController'
 const app = getApp()
+import { baseURL } from '../../service/request'
 
 Page({
   /**
@@ -19,6 +20,9 @@ Page({
   onLoad: async function(options) {
     try {
       let res = await VideoController.query(options.videoId)
+      res.postDate = res.postDate.split(' ')[0]
+      res.validateDate = res.validateDate.split(' ')[0]
+      res.videoPath = baseURL + '/' + res.videoPath
       console.log(res)
       this.setData({
         video: res

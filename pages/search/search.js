@@ -73,15 +73,21 @@ Page({
 
   async search(e) {
     try {
-      console.log(this.data)
       let posts = await PostController.filter(
         this.data.disMH === '' ? null : this.data.disMH,
         this.data.disZB === '' ? null : this.data.disZB,
-        this.data.majorIndex === 0 ? [] : [this.data.majorIndex],
+        parseInt(this.data.majorIndex) === 0 ? [] : [this.data.majorIndex],
         this.data.maxDu === '' ? null : this.data.maxDu,
         this.data.minDu === '' ? null : this.data.minDu,
         e.detail
       )
+      console.log(posts)
+      posts.forEach(e => {
+        e.expiration = e.expiration.split(' ')[0]
+        e.startTime = e.startTime.split(' ')[0]
+        e.endTime = e.endTime.split(' ')[0]
+        e.postDate = e.postDate.split(' ')[0]
+      })
       console.log(posts)
       this.setData({
         posts: posts

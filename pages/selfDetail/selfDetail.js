@@ -1,5 +1,6 @@
 // pages/selfDetail/selfDetail.js
 import { UserController } from '../../service/UserController'
+import { MajorController } from '../../service/MajorController'
 
 const app = getApp()
 
@@ -8,7 +9,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user: null
+    user: null,
+
+    majors: []
   },
 
   /**
@@ -25,6 +28,8 @@ Page({
       let user = await UserController.find(app.globalData.user.userId)
       if (user.gender === 'female') user.gender = '女'
       else user.gender = '男'
+      let majors = await MajorController.getAllMajor()
+      user.major = majors[user.major - 1].majorName
       console.log(user)
       this.setData({
         user: user

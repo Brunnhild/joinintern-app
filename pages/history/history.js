@@ -68,6 +68,16 @@ Page({
     try {
       let videos = await VideoController.history(app.globalData.user.userId)
       let posts = await PostController.history(app.globalData.user.userId)
+      videos.forEach(e => {
+        e.postDate = e.postDate.split(' ')[0]
+        e.validateDate = e.validateDate.split(' ')[0]
+      })
+      posts.forEach(e => {
+        e.expiration = e.expiration.split(' ')[0]
+        e.startTime = e.startTime.split(' ')[0]
+        e.endTime = e.endTime.split(' ')[0]
+        e.postDate = e.postDate.split(' ')[0]
+      })
       this.setData({
         videos: videos,
         posts: posts
