@@ -39,6 +39,22 @@
       <view class="form-item-detail">{{post.postDate}}</view>
     </view>
     <view class="form-item">
+      <view class="form-item-title">所需专业：</view>
+      <view class="form-item-detail-block chip">
+        <block wx:for="{{majors}}" wx:key="index">
+          <j-chip>{{item.majorName}}</j-chip>
+        </block>
+      </view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-title">实习标签：</view>
+      <view class="form-item-detail-block chip">
+        <block wx:for="{{labels}}" wx:key="index">
+          <j-chip>{{item.labelContent}}</j-chip>
+        </block>
+      </view>
+    </view>
+    <view class="form-item">
       <view class="form-item-title">实习简介：</view>
       <view class="form-item-detail-block">{{post.postContent}}</view>
     </view>

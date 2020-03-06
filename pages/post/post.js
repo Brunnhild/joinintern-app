@@ -1,5 +1,7 @@
 // pages/post/post.js
 import { PostController } from '../../service/PostController'
+import { MajorController } from '../../service/MajorController'
+import { LabelController } from '../../service/LabelController'
 const app = getApp()
 
 Page({
@@ -12,16 +14,39 @@ Page({
     location: '',
     distanceMH: '',
     distanceZB: '',
-    startTime: '',
-    endTime: '',
+    startTime: '2020-03-01 14:00:00',
+    endTime: '2020-03-01 14:00:00',
     description: '',
-    expiration: ''
+    expiration: '2020-03-01 14:00:00',
+
+    majorSelected: [],
+    labelsSelected: [],
+
+    majors: [],
+    labels: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: async function(options) {
+    try {
+      let majors = await MajorController.getAllMajor()
+      let labels = await LabelController.getLabels()
+      this.setData({
+        majors: majors,
+        labels: labels
+      })
+      console.log(majors)
+      console.log(labels)
+    } catch (e) {
+      wx.showModal({
+        title: '专业获取或标签失败',
+        showCancel: false
+      })
+      console.log(e)
+    }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -65,12 +90,14 @@ Page({
         this.data.distanceMH,
         this.data.distanceZB,
         this.data.duration,
-        this.data.endTime,
-        this.data.expiration,
+        this.data.endTime + ' 14:00:00',
+        this.data.expiration + ' 14:00:00',
+        this.data.labelsSelected.map(e => parseInt(e) + 1),
         this.data.location,
+        this.data.majorSelected.map(e => parseInt(e) + 1),
         this.data.description,
         this.data.title,
-        this.data.startTime
+        this.data.startTime + ' 14:00:00'
       )
       console.log(res)
       wx.showToast({
@@ -95,7 +122,7 @@ Page({
   },
 
   inputDuration(e) {
-    this.setDate({
+    this.setData({
       duration: e.detail
     })
   },
@@ -139,6 +166,18 @@ Page({
   selectExpiration(e) {
     this.setData({
       expiration: e.detail
+    })
+  },
+
+  selectMajor(e) {
+    this.setData({
+      majorSelected: e.detail.value
+    })
+  },
+
+  selectLabel(e) {
+    this.setData({
+      labelsSelected: e.detail.value
     })
   }
 })

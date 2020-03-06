@@ -19,7 +19,9 @@ export class PostController {
     duration,
     endTime,
     expiration,
+    labels,
     location,
+    majors,
     postContent,
     postTitle,
     startTime
@@ -31,7 +33,9 @@ export class PostController {
       duration: duration,
       endTime: endTime,
       expiration: expiration,
+      labels: labels,
       location: location,
+      majors: majors,
       postContent: postContent,
       postTitle: postTitle,
       startTime: startTime

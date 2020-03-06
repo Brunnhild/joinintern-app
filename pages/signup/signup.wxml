@@ -7,6 +7,6 @@
   <j-input placeholder="输入您的年级" mode="number" title="年级" show-bullet bindinput="inputLevel"></j-input>
   <j-picker range="{{majors}}" label="专业" bindselect="selectMajor"></j-picker>
   <j-file-uploader bindselect="selectPhoto">请选择校园卡照片</j-file-uploader>
-  <j-textarea placeholder="请输入您的简介" label="简介" bindinput="inputDescription"></j-textarea>
+  <j-textarea placeholder="请输入您的简介" show-bullet title="简介" bindinput="inputDescription"></j-textarea>
   <j-button bindtap="signup">注册</j-button>
 </view>

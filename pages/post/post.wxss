@@ -1,1 +1,9 @@
-/* pages/post/post.wxss */
+.title {
+  font-size: 35rpx;
+}
+
+.item {
+  font-size: 35rpx;
+}
+
+/*# sourceMappingURL=post.wxss.map */

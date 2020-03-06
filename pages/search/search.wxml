@@ -1,6 +1,25 @@
 <!--pages/search/search.wxml-->
 <view>
   <j-search placeholder="请输入关键词" bindsearch="search"></j-search>
+  <picker class="picker" range="{{majors}}" bindchange="selectMajor">
+    <view class="title">请选择专业：{{majors[majorIndex]}}</view>
+  </picker>
+  <view class="input-group">
+    <view class="title">闵行最大距离</view>
+    <input bindinput="inputDisMH" placeholder="不限" />
+  </view>
+  <view class="input-group">
+    <view class="title">中北最大距离</view>
+    <input bindinput="inputDisZB" placeholder="不限" />
+  </view>
+  <view class="input-group">
+    <view class="title">最长时间</view>
+    <input bindinput="inputMaxDu" placeholder="不限" />
+  </view>
+  <view class="input-group">
+    <view class="title">最短时间</view>
+    <input bindinput="inputMinDu" placeholder="不限" />
+  </view>
   <view class="page-container">
     <j-page wx:if="{{posts.length === 0}}" icon="{{icon}}">{{hint}}</j-page>
     <block wx:for="{{posts}}" wx:key="index">

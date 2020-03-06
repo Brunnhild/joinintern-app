@@ -9,5 +9,17 @@
   <j-date-picker label="输入结束时间" bindselect="selectEndTime"></j-date-picker>
   <j-date-picker label="输入过期时间" bindselect="selectExpiration"></j-date-picker>
   <j-textarea placeholder="输入简介" title="实习描述" show-bullet bindinput="inputDescription"></j-textarea>
-  <j-button bindtap="create">注册</j-button>
+  <view class="title">请选择专业</view>
+  <checkbox-group bindchange="selectMajor">
+    <block wx:for="{{majors}}" wx:key="index">
+      <checkbox class="item" value="{{index}}">{{item.majorName}}</checkbox>
+    </block>
+  </checkbox-group>
+  <view class="title">请选择标签</view>
+  <checkbox-group bindchange="selectLabel">
+    <block wx:for="{{labels}}" wx:key="index">
+      <checkbox class="item" value="{{index}}">{{item.labelContent}}</checkbox>
+    </block>
+  </checkbox-group>
+  <j-button bindtap="create">发布</j-button>
 </view>

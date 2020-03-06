@@ -9,7 +9,9 @@ Page({
   data: {
     post: null,
     followState: false,
-    show: false
+    show: false,
+    majors: [],
+    labels: []
   },
 
   /**
@@ -18,9 +20,13 @@ Page({
   onLoad: async function(options) {
     try {
       let res = await PostController.query(options.postId)
+      let majors = await PostController.getMajors(res.postId)
+      let labels = await PostController.getLabels(res.postId)
       console.log(res)
       this.setData({
-        post: res
+        post: res,
+        majors: majors,
+        labels: labels
       })
       if (app.globalData.user) {
         let isFav = await PostController.isFav(

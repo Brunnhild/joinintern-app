@@ -1,1 +1,23 @@
-/* pages/search/search.wxss */
+.picker {
+  font-size: 35rpx;
+  padding: 0.2em 1em;
+  background: white;
+  border-bottom: solid #cccccc 1rpx;
+  display: flex;
+}
+
+.input-group {
+  background: white;
+  display: flex;
+  font-size: 35rpx;
+  padding: 0.2em 1em;
+  border-bottom: solid #cccccc 1rpx;
+}
+.input-group .title {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  width: 40%;
+}
+
+/*# sourceMappingURL=search.wxss.map */

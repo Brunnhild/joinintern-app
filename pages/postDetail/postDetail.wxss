@@ -1,3 +1,5 @@
-
+.chip {
+  font-weight: normal !important;
+}
 
 /*# sourceMappingURL=postDetail.wxss.map */

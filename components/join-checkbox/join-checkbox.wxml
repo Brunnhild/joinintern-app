@@ -1,5 +1,5 @@
 <!--components/join-checkbox/join-checkbox.wxml-->
 <view class="checkbox-view">
-  <checkbox/>
+  <checkbox value="{{value}}"/>
   <text class="text"><slot></slot></text>
 </view>

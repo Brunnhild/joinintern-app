@@ -1,5 +1,6 @@
 // pages/search/search.js
 import { PostController } from '../../service/PostController'
+import { MajorController } from '../../service/MajorController'
 
 Page({
   /**
@@ -8,13 +9,32 @@ Page({
   data: {
     icon: '/assets/happy.png',
     hint: '请输入关键字查询',
-    posts: []
+    posts: [],
+    majors: ['不限'],
+    majorIndex: 0,
+    disMH: '',
+    disZB: '',
+    maxDu: '',
+    minDu: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: async function(options) {
+    try {
+      let majors = await MajorController.getAllMajor()
+      this.setData({
+        majors: [...this.data.majors, ...majors.map(e => e.majorName)]
+      })
+    } catch (e) {
+      wx.showModal({
+        title: '获取专业信息失败',
+        showCancel: false
+      })
+      console.log(e)
+    }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -53,12 +73,13 @@ Page({
 
   async search(e) {
     try {
+      console.log(this.data)
       let posts = await PostController.filter(
-        null,
-        null,
-        [],
-        null,
-        null,
+        this.data.disMH === '' ? null : this.data.disMH,
+        this.data.disZB === '' ? null : this.data.disZB,
+        this.data.majorIndex === 0 ? [] : [this.data.majorIndex],
+        this.data.maxDu === '' ? null : this.data.maxDu,
+        this.data.minDu === '' ? null : this.data.minDu,
         e.detail
       )
       console.log(posts)
@@ -78,5 +99,41 @@ Page({
       })
       console.log(e)
     }
+  },
+
+  selectMajor(e) {
+    this.setData({
+      majorIndex: e.detail.value
+    })
+  },
+
+  inputDisMH(e) {
+    this.setData({
+      disMH: e.detail.value
+    })
+  },
+
+  inputDisZB(e) {
+    this.setData({
+      disZB: e.detail.value
+    })
+  },
+
+  inputMaxDu(e) {
+    this.setData({
+      maxDu: e.detail.value
+    })
+  },
+
+  inputMinDu(e) {
+    this.setData({
+      minDu: e.detail.value
+    })
+  },
+
+  toDetail(e) {
+    wx.navigateTo({
+      url: `/pages/postDetail/postDetail?postId=${e.currentTarget.dataset.postId}`
+    })
   }
 })
