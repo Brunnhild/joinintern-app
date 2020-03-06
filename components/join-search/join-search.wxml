@@ -1,0 +1,5 @@
+<!--components/join-search/join-search.wxml-->
+<view class="root">
+  <input class="input" bindinput="input" placeholder="{{placeholder}}" />
+  <view class="search" bindtap="search">搜索</view>
+</view>

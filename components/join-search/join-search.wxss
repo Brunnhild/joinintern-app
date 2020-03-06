@@ -1,0 +1,30 @@
+.root {
+  font-size: 35rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input {
+  height: 45.5rpx;
+  margin: 0.1em 0;
+  padding-left: 5%;
+  border: solid 2rpx #cccccc;
+  width: 75%;
+  font-size: inherit;
+  border-radius: 17.5rpx;
+  background: white;
+}
+
+.search {
+  color: #00E676;
+  font-size: inherit;
+  width: 10%;
+  transition: 0.2s;
+}
+.search:active {
+  color: #B9F6CA;
+}
+
+/*# sourceMappingURL=join-search.wxss.map */

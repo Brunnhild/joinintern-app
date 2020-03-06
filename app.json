@@ -12,7 +12,10 @@
     "pages/postDetail/postDetail",
     "pages/videoDetail/videoDetail",
     "pages/favList/favList",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/graduate/graduate",
+    "pages/graDetail/graDetail",
+    "pages/selfDetail/selfDetail"
   ],
   "tabBar": {
     "list": [
@@ -66,6 +69,7 @@
     "j-background": "../../components/join-background/join-background",
     "j-page": "../../components/join-page/join-page",
     "j-file-uploader": "../../components/join-file-uploader/join-file-uploader",
-    "j-date-picker": "../../components/join-date-picker/join-date-picker"
+    "j-date-picker": "../../components/join-date-picker/join-date-picker",
+    "j-search": "../../components/join-search/join-search"
   }
 }

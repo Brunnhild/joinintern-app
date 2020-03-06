@@ -33,6 +33,7 @@ export class UserController {
     file,
     stuId,
     avatar,
+    description,
     enterpriseTypeId,
     gender,
     level,
@@ -44,6 +45,7 @@ export class UserController {
     formdata.append('file', file)
     formdata.append('stuId', stuId)
     formdata.append('avatar', avatar)
+    formdata.append('description', description)
     formdata.append('enterpriseTypeId', enterpriseTypeId)
     formdata.append('gender', gender)
     formdata.append('level', level)

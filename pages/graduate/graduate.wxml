@@ -1,0 +1,11 @@
+<!--pages/graduate/graduate.wxml-->
+<view class="page-container">
+  <j-page wx:if="{{gra.length === 0}}" icon="/assets/sad.png">平台现在还没有校友哦</j-page>
+  <block wx:for="{{gra}}" wx:key="index">
+    <j-card row data-gra-id="{{item.userId}}" avatar="{{item.avatar}}" bindtap="toDetail">
+      <view slot="title">{{item.nickname}}</view>
+      <view slot="body">{{item.description}}</view>
+      <view slot="extra">年级：{{item.level}}</view>
+    </j-card>
+  </block>
+</view>

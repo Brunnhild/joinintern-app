@@ -15,7 +15,8 @@ Page({
     level: '',
     majors: [],
     major: 0,
-    photo: ''
+    photo: '',
+    description: ''
   },
 
   /**
@@ -77,7 +78,8 @@ Page({
             level: this.data.level,
             major: parseInt(this.data.major) + 1,
             nickname: app.globalData.userInfo.nickName,
-            avatar: app.globalData.userInfo.avatarUrl
+            avatar: app.globalData.userInfo.avatarUrl,
+            description: this.data.description
           },
           success: res => {
             console.log(JSON.parse(res.data))
@@ -134,6 +136,12 @@ Page({
   selectPhoto(e) {
     this.setData({
       photo: e.detail.tempFilePaths[0]
+    })
+  },
+
+  inputDescription(e) {
+    this.setData({
+      description: e.detail
     })
   }
 })

@@ -1,2 +1,14 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view>
+  <j-search placeholder="请输入关键词" bindsearch="search"></j-search>
+  <view class="page-container">
+    <j-page wx:if="{{posts.length === 0}}" icon="{{icon}}">{{hint}}</j-page>
+    <block wx:for="{{posts}}" wx:key="index">
+      <j-card data-post-id="{{item.postId}}" bindtap="toDetail">
+        <view slot="title">{{item.postTitle}}</view>
+        <view slot="body">{{item.postContent}}</view>
+        <view slot="extra">过期时间：{{item.expiration}}</view>
+      </j-card>
+    </block>
+  </view>
+</view>

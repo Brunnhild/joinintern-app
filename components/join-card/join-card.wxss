@@ -36,6 +36,7 @@
 
 .column-img {
   margin-right: 30rpx;
+  width: 30%;
 }
 
 .mask {

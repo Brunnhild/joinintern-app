@@ -26,11 +26,11 @@
       </view>
       <view slot="lower">浏览记录</view>
     </j-inline-card>
-    <j-inline-card background="rgba(0, 0, 0, 0)">
+    <j-inline-card background="rgba(0, 0, 0, 0)" bindtap="toInfo">
       <view slot="upper">
-        <j-icon-button icon="/assets/set.png"></j-icon-button>
+        <j-icon-button icon="/assets/account.png"></j-icon-button>
       </view>
-      <view slot="lower">设置</view>
+      <view slot="lower">我的信息</view>
     </j-inline-card>
   </view>
   <view class="container">
@@ -54,7 +54,7 @@
       </view>
       <view slot="lower">实习面试经验视频分享</view>
     </j-inline-card>
-    <j-inline-card border class="big">
+    <j-inline-card border class="big" bindtap="toGra">
       <view slot="upper">
         <image src="/assets/experience.png" class="image"/>
       </view>

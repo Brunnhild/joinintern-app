@@ -105,5 +105,17 @@ Page({
     wx.navigateTo({
       url: '/pages/history/history'
     })
+  },
+
+  toGra() {
+    wx.navigateTo({
+      url: '/pages/graduate/graduate'
+    })
+  },
+
+  toInfo() {
+    wx.navigateTo({
+      url: '/pages/selfDetail/selfDetail'
+    })
   }
 })

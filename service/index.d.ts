@@ -276,7 +276,7 @@ declare module '@/service/PostController' {
     static filter(
       distanceMH?: number,
       distanceZB?: number,
-      majors?: List<Integer>,
+      majors?: number[],
       maxDuration?: number,
       minDuration?: number,
       title?: string
@@ -341,6 +341,7 @@ declare module '@/service/UserController' {
       file: File,
       stuId: string,
       avatar?: string,
+      description?: string,
       enterpriseTypeId?: number,
       gender?: string,
       level?: number,

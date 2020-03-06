@@ -1,6 +1,6 @@
 import Api from 'wx-axios-promise'
 
-let baseURL = 'http://localhost:8090'
+let baseURL = 'http://www.joinintern.cn:8090'
 // if (process.env.NODE_ENV === 'development')
 //   baseURL = 'http://localhost:8080'
 // else baseURL = 'https://www.joinintern.cn'
@@ -23,7 +23,9 @@ base.interceptors.response.use(
 function parseQuery(arg) {
   let append = '?'
   for (let item in arg) {
-    append += `${item}=${arg[item]}&`
+    if (arg[item]) {
+      append += `${item}=${arg[item]}&`
+    }
   }
   return append
 }

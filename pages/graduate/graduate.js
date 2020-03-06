@@ -1,20 +1,32 @@
-// pages/search/search.js
-import { PostController } from '../../service/PostController'
+// pages/graduate/graduate.js
+import { UserController } from '../../service/UserController'
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    icon: '/assets/happy.png',
-    hint: '请输入关键字查询',
-    posts: []
+    gra: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: async function(options) {
+    try {
+      let gra = await UserController.graList()
+      this.setData({
+        gra: gra
+      })
+      console.log(gra)
+    } catch (e) {
+      wx.showModal({
+        title: '获取校友失败',
+        showCancel: false
+      })
+      console.log(e)
+    }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -51,32 +63,9 @@ Page({
    */
   onShareAppMessage: function() {},
 
-  async search(e) {
-    try {
-      let posts = await PostController.filter(
-        null,
-        null,
-        [],
-        null,
-        null,
-        e.detail
-      )
-      console.log(posts)
-      this.setData({
-        posts: posts
-      })
-      if (posts.length === 0) {
-        this.setData({
-          icon: '/assets/sad.png',
-          hint: '没有查询到结果'
-        })
-      }
-    } catch (e) {
-      wx.showModal({
-        title: '查询失败',
-        showCancel: false
-      })
-      console.log(e)
-    }
+  toDetail(e) {
+    wx.navigateTo({
+      url: `/pages/graDetail/graDetail?userId=${e.currentTarget.dataset.graId}`
+    })
   }
 })
