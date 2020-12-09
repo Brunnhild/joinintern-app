@@ -8,13 +8,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user: null
+    user: null,
+    noGra: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: async function(options) {
+    if (!!options.noGra) this.setData({
+      noGra: true
+    })
     try {
       let user = await UserController.find(options.userId)
       let majors = await MajorController.getAllMajor()

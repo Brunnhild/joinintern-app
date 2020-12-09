@@ -1,5 +1,6 @@
 // pages/postDetail/postDetail.js
 import { PostController } from '../../service/PostController'
+import { UserController } from '../../service/UserController'
 const app = getApp()
 
 Page({
@@ -11,7 +12,8 @@ Page({
     followState: false,
     show: false,
     majors: [],
-    labels: []
+    labels: [],
+    author: null
   },
 
   /**
@@ -42,6 +44,11 @@ Page({
           show: true
         })
       }
+      let author = await UserController.find(res.authorId)
+      console.log(author)
+      this.setData({
+        author: author
+      })
     } catch (e) {
       wx.showModal({
         title: '获取详细信息失败',
@@ -112,5 +119,11 @@ Page({
         icon: 'success'
       })
     }
+  },
+
+  toAuthor(e) {
+    wx.navigateTo({
+      url: `/pages/graDetail/graDetail?userId=${this.data.author.userId}&noGra`
+    })
   }
 })

@@ -19,10 +19,6 @@
       <view class="form-item-detail">{{user.major}}</view>
     </view>
     <view class="form-item">
-      <view class="form-item-title">年级：</view>
-      <view class="form-item-detail">{{user.level}}</view>
-    </view>
-    <view class="form-item">
       <view class="form-item-title">简介：</view>
       <view class="form-item-detail-block">{{user.description}}</view>
     </view>

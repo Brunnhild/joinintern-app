@@ -87,6 +87,7 @@ Page({
         e.startTime = e.startTime.split(' ')[0]
         e.endTime = e.endTime.split(' ')[0]
         e.postDate = e.postDate.split(' ')[0]
+        if (e.postContent.length > 80) e.postContent = e.postContent.slice(0, 80) + '...'
       })
       console.log(posts)
       this.setData({

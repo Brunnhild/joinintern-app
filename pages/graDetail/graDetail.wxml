@@ -1,7 +1,7 @@
 <!--pages/graDetail/graDetail.wxml-->
 <view class="page-container">
   <view class="form form-bordered">
-    <view class="form-title">校友信息</view>
+    <view class="form-title">{{ noGra ? '用户信息' : '校友信息'}}</view>
     <view class="form-item">
       <view class="form-item-title">姓名：</view>
       <view class="form-item-detail">{{user.nickname}}</view>
@@ -22,7 +22,7 @@
       <view class="form-item-title">年级：</view>
       <view class="form-item-detail">{{user.level}}</view>
     </view>
-    <view class="form-item">
+    <view class="form-item" wx:if="{{ !noGra }}">
       <view class="form-item-title">企业类型：</view>
       <view class="form-item-detail">{{user.enterpriseType}}</view>
     </view>

@@ -71,12 +71,14 @@ Page({
       videos.forEach(e => {
         e.postDate = e.postDate.split(' ')[0]
         e.validateDate = e.validateDate.split(' ')[0]
+        if (e.videoDescription.length > 80) e.videoDescription = e.videoDescription.slice(0, 80) + '...'
       })
       posts.forEach(e => {
         e.expiration = e.expiration.split(' ')[0]
         e.startTime = e.startTime.split(' ')[0]
         e.endTime = e.endTime.split(' ')[0]
         e.postDate = e.postDate.split(' ')[0]
+        if (e.postContent.length > 80) e.postContent = e.postContent.slice(0, 80) + '...'
       })
       this.setData({
         videos: videos,

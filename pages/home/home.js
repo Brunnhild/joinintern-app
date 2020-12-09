@@ -9,9 +9,9 @@ Page({
   data: {
     posts: [],
     cells: [
-      'http://www.joinintern.cn:8090/media/home-1.png',
-      'http://www.joinintern.cn:8090/media/home-2.jpg',
-      'http://www.joinintern.cn:8090/media/home-3.png'
+      'https://www.joinintern.cn/media/home-1.png',
+      'https://www.joinintern.cn/media/home-2.jpg',
+      'https://www.joinintern.cn/media/home-3.png'
     ]
   },
 
@@ -91,6 +91,7 @@ Page({
         e.startTime = e.startTime.split(' ')[0]
         e.endTime = e.endTime.split(' ')[0]
         e.postDate = e.postDate.split(' ')[0]
+        if (e.postContent.length > 80) e.postContent = e.postContent.slice(0, 80) + '...'
       })
       this.setData({
         posts: res

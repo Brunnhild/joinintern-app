@@ -30,7 +30,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function(options) {
-    if (app.globalData.user.userIdentity !== 'validate') {
+    if (app.globalData.user.validation !== 'validate') {
       wx.showModal({
         title: '您还没有通过认证，不能发布实习哦'
       })
@@ -89,12 +89,19 @@ Page({
   onShareAppMessage: function() {},
 
   async create() {
+    if (isNaN(parseInt(this.data.duration))) {
+      wx.showModal({
+        title: '时长应为数字',
+        showCancel: false
+      })
+      return
+    }
     try {
       let res = await PostController.createPost(
         app.globalData.user.userId,
         this.data.distanceMH,
         this.data.distanceZB,
-        this.data.duration,
+        parseInt(this.data.duration),
         this.data.endTime + ' 14:00:00',
         this.data.expiration + ' 14:00:00',
         this.data.labelsSelected.map(e => parseInt(e) + 1),

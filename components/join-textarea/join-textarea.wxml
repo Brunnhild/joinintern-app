@@ -1,5 +1,5 @@
 <!--components/join-textarea/join-textarea.wxml-->
 <view>
   <text class="{{showBullet ? 'prepend-bullet' : ''}} input-title">{{title}}</text>
-  <textarea class="rounded-textarea" bindinput="input" placeholder="{{placeholder}}"></textarea>
+  <textarea maxlength="-1" class="rounded-textarea" bindinput="input" placeholder="{{placeholder}}"></textarea>
 </view>

@@ -23,6 +23,7 @@ Page({
       res.postDate = res.postDate.split(' ')[0]
       res.validateDate = res.validateDate.split(' ')[0]
       res.videoPath = baseURL + '/' + res.videoPath
+      if (res.videoDescription.length > 80) res.videoDescription = res.videoDescription.slice(0, 80) + '...'
       console.log(res)
       this.setData({
         video: res
